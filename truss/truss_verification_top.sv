@@ -34,7 +34,11 @@
 `include "testbench.svh"
 
 `ifndef TEST
-`error "TEST undefined! cannot build a test!"
+`define TEST test
+`endif
+
+`ifndef TEST_NAME
+`define TEST_NAME "test name"
 `endif
 
 

@@ -31,6 +31,9 @@ EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 `ifndef __uart_1655_register_definitions__
 `define __uart_1655_register_definitions__
 
+
+
+
 ///note that its originally from uart_defines. <--- do this officilly in copyleft
 
 

@@ -47,7 +47,7 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 `include "uart_bfm_agent.svh"
 
   //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-virtual class uart_checker extends truss::checker;
+virtual class uart_checker extends truss::Checker;
    protected teal::vout log_;
 
    local teal::latch done_;
