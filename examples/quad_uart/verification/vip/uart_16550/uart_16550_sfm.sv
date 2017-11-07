@@ -52,8 +52,8 @@ function uart_16550_sfm::new (string name, int index, virtual uart_16550_interfa
 //   log_.show_debug_level (99); 
 endfunction
 
-`define field_get(data, field) data[`field``_max:`field``_min]
-`define field_put(data,field,value) data [`field``_max:`field``_min] = value
+
+
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -81,7 +81,7 @@ task uart_16550_sfm::do_rx_thread_ ();
       end
 
       do_receive_completed_ (current_rx);
-   end // for (;;)
+   end
 endtask 
 
 

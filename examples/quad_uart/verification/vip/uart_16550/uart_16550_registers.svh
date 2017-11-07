@@ -227,4 +227,7 @@ EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
   //      [7:0] ------- "dl[15:8]" MSB of DL Reg. written 1. - dl == '0' disables outputs / dl = 1/(T_wb_clk_period*16*BaudRate)
   //    ----------------
 
+`define field_get(data, field) data[`field``_max:`field``_min]
+`define field_put(data,field,value) data [`field``_max:`field``_min] = value
+
 `endif
