@@ -73,12 +73,17 @@ task uart_16550_sfm::do_rx_thread_ ();
       teal::read  (bus_address_ (`UART_VERIF_REG_II), data, 8);
       msg = $psprintf (" Interrupt Identification: 0x%0x", data);
       log_.debug (msg);
-      
 
-      if ((`field_get (mydata, interrupt_identification) == `interrupt_identification_received_data) ||
+
+
+      if ((`field_get (data, interrupt_identification) == `interrupt_identification_received_data) ||
 	  (`field_get (data, interrupt_identification) == `interrupt_identification_timeout)) begin
 	 teal::read  (bus_address_ (`UART_VERIF_REG_RB), current_rx.data);
       end
+
+      `truss_assert (data != 0);
+      `new_truss_assert (data != 0);
+
 
       do_receive_completed_ (current_rx);
    end
