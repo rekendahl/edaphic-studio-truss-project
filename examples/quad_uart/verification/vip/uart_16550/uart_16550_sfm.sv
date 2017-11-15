@@ -39,6 +39,7 @@
 
 `include "uart_16550_sfm.svh"
 `include "uart_16550_registers.svh"
+//(* edaphic_include = "uart_16550_registers.svh" *);
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -82,7 +83,7 @@ task uart_16550_sfm::do_rx_thread_ ();
       end
 
       `truss_assert (data != 0);
-      `new_truss_assert (data != 0);
+      `old_truss_assert (data != 0);
 
 
       do_receive_completed_ (current_rx);

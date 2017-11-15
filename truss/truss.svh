@@ -65,8 +65,8 @@ endinterface
    
 package truss;
 
-`define truss_assert(x) if (!(x)) log_.fatal (" assertion failure: x")
-`define new_truss_assert(x) if (!(x)) log_.fatal(`" assertion failure: x`")
+`define old_truss_assert(x) if (!(x)) log_.fatal (" assertion failure: x")
+`define truss_assert(x) if (!(x)) log_.fatal(`" assertion failure: x`")
 
 typedef enum {cold, warm} reset;
 

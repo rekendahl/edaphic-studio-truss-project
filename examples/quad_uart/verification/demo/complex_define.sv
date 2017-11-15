@@ -1,6 +1,12 @@
 `ifndef __ANA_COV_SV
 `define __ANA_COV_SV
 
+`define VAL 32
+`define TOP(a, b) a + b
+d = `TOP(b, a);
+d = `TOP(`TOP(b, 1), `TOP(42, a));
+
+
 `define bin_vi(a,b) \
            bins R_``a_``b = {[a*cfg.max_voltage.i/16:b*cfg.max_voltage.i/16-1]}
 

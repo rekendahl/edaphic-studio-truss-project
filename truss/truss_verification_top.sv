@@ -34,7 +34,7 @@
 `include "testbench.svh"
 
 `ifndef TEST
-`define TEST test
+    `include "block_uart.svh"
 `endif
 
 `ifndef TEST_NAME
@@ -60,7 +60,12 @@ initial begin
    string top;
    testbench testbench_0;
    truss::watchdog  watchdog_0;
-   `TEST test_0;
+   `ifdef TEST
+      `TEST test_0;
+   `else
+      block_uart test_0;
+   `endif
+
    teal::vout log;
    
    log = new ("verification_top:"); 
