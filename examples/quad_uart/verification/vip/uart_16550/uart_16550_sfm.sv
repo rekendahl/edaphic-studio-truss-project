@@ -110,7 +110,8 @@ task uart_16550_sfm::send (uart_block  current_tx);
 
    for (int i = 0; (i <= current_tx.max_offset ()); ++i) begin
       `truss_assert (current_tx.words_[i].status_ == 0); 
-      teal::write (bus_address_ (`UART_VERIF_REG_TR), current_tx.words_[i].data[7:0], 8);  
+      teal::write (bus_address_ (`UART_VERIF_REG_TR), current_tx.words_[i].data[7:0], 8);
+      current_tx.add_word();
    end
 endtask
 

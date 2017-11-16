@@ -34,7 +34,8 @@ EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 `include "truss.svh"
 `include "testbench.svh"
 
-typedef class uart_basic_test_component;
+//typedef class uart_basic_test_component;
+`include "uart_basic_test_component.svh"
 
 class block_uart extends truss::test_base;
   extern function new (testbench tb, truss::watchdog w, string n = "block uart test:");  

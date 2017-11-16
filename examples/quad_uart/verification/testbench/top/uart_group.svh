@@ -34,6 +34,7 @@ EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 `include "teal.svh"
 
+`define MTI
 `ifdef MTI
   `include "uart_16550_configuration.svh"
   `include "uart_bfm.svh"

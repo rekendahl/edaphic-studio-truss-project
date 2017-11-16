@@ -33,7 +33,7 @@ EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 `include "truss.svh"
 
-//`define MTI
+`define MTI
 `ifdef MTI
   `include "uart_group.svh"
   `include "wishbone_driver.svh"
